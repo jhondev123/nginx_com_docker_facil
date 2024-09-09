@@ -8,6 +8,14 @@ services:
     networks:
       - app
 
+  php:
+    image: php:8.3-fpm
+    container_name: php_container
+    volumes:
+      - ./php:/var/www/public
+    networks:
+      - app
+
 # coloque em todos os containers essa network para eles se enxergarem
 networks:
   app:
